@@ -6,7 +6,7 @@
 
                         <div class="showing-list">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <!-- <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <div class="view-icons">
                                             <a href="instructor-grid.html" class="grid-view "><i
@@ -18,8 +18,8 @@
                                             <h4>Showing 1-9 of 50 results</h4>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6">
+                                </div> -->
+                                <!-- <div class="col-lg-6">
                                     <div class="show-filter add-course-info">
                                         <form action="#">
                                             <div class="row gx-2 align-items-center">
@@ -36,12 +36,10 @@
                                                             wire:effects="[]" wire:id="sk0YI0gaCBEOSeqatCw7">
                                                             <select wire:model="selectedOption" id="select2"
                                                                 class="form-select select">
-                                                                <!--[if BLOCK]><![endif]-->
                                                                 <option value="Newly published">Newly published</option>
                                                                 <option value="Angular">Angular</option>
                                                                 <option value="Nodejs">Nodejs</option>
                                                                 <option value="React">React</option>
-                                                                <!--[if ENDBLOCK]><![endif]-->
                                                             </select>
                                                         </div>
                                                     </div>
@@ -49,23 +47,26 @@
                                             </div>
                                         </form>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
 
                         <div class="row">
-
+                            <?php 
+                                if($centres){
+                                    foreach($centres as $centre){
+                            ?>
                             <div class="col-lg-12 d-flex">
                                 <div class="instructor-list flex-fill">
                                     <div class="instructor-img">
                                         <a href="instructor-profile.html">
-                                            <img class="img-fluid" alt="" src="assets/img/user/user11.jpg">
+                                            <img class="img-fluid" alt="" src="<?= base_url($centre['img'])?>">
                                         </a>
                                     </div>
                                     <div class="instructor-content">
-                                        <h5><a href="instructor-profile.html">Rolands R</a></h5>
-                                        <h6>Instructor</h6>
-                                        <div class="instructor-info">
+                                        <h5><a href="instructor-profile.html"><?= $centre['name']?></a></h5>
+                                        <h6><?= $centre['centre_name']?></h6>
+                                        <!-- <div class="instructor-info">
                                             <div class="rating-img d-flex align-items-center">
                                                 <img src="assets/img/icon/icon-01.svg" class="me-1" alt="">
                                                 <p>12+ Lesson</p>
@@ -89,17 +90,17 @@
                                             <div class="course-share rating-count">
                                                 <a href="#rate"><i class="fa-regular fa-heart"></i></a>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="instructor-badge">
-                                            <span class="web-badge">Web Design</span>
-                                            <span class="web-badge">web development</span>
-                                            <span class="web-badge">UI Design</span>
+                                            <span class="web-badge">Contact:<?= $centre['contact']?></span>
+                                            <span class="web-badge">Email: <?= $centre['email']?></span>
+                                            <!-- <span class="web-badge">UI Design</span> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
+                            <?php }}?>
+<!-- 
                             <div class="col-lg-12 d-flex">
                                 <div class="instructor-list flex-fill">
                                     <div class="instructor-img">
@@ -400,7 +401,7 @@
                                     </ul>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                     <!-- <div class="col-lg-3">

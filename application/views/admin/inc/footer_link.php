@@ -1,5 +1,5 @@
 
-    <script src="<?=base_url()?>assets/js/jquery-3.6.0.min.js" type=""></script>
+    <script src="<?=base_url()?>assets/js/jquery-3.6.0.min.js" type="07ba63059fb555adc69bd99b-text/javascript"></script>
 
 <script src="<?=base_url()?>assets/js/bootstrap.bundle.min.js" type=""></script>
 
@@ -40,9 +40,6 @@
     type="">window.livewireScriptConfig = {"csrf":"zys1Tptzq1HI08KoIbQVmNfiSHcbaFnOtaw18XRv","uri":"\/livewire\/update","progressBar":""};</script>
 
 <script src="<?=base_url()?>assets/js/script.js" type=""></script>
-<!-- <script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
-    data-cf-settings="07ba63059fb555adc69bd99b-|49" defer=""></script> -->
-
 <?php
 if (!empty($footer_link)) {
     foreach ($footer_link as $link) {

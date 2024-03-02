@@ -381,6 +381,11 @@
                                             <i class="feather-users"></i> Get In Touch
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="<?= isset($enroled_courses) ? 'active' : '' ?>" href="<?= base_url('admin/enroled-courses')?>" class="nav-link">
+                                            <i class="feather-users"></i> Enroled Courses
+                                        </a>
+                                    </li>
                                     <!-- <li class="nav-item">
                                         <a class="" href="instructor-payouts.html" class="nav-link">
                                             <i class="feather-dollar-sign"></i> Payouts

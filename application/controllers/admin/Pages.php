@@ -150,6 +150,16 @@ class Pages extends Admin
         $this->is_auth('admin/get_in_touches.php',$data);
     }
 
+    public function enroled_courses(){
+        $this->init_model(MODEL_PAGES);
+        $data = PAGE_DATA_ADMIN;
+        $data['data_footer']['footer_link']=['get_in_touch_js.php'];
+        $data['data_header']['enroled_courses'] = true;
+        $data['data_page']['enroled_courses'] = $this->Pages_model->get_all_enroled_courses();
+
+        $this->is_auth('admin/enroled_courses.php',$data);
+    }
+
     public function add_admin(){
         $insert_users = [
             "uid"       => $this->generate_uid(UID_USER),
@@ -392,6 +402,7 @@ class Pages extends Admin
     {
         $name           = $this->input->post('course_name');
         $description    = $this->input->post('course_description');
+        $duration       = $this->input->post('course_duration');
         $status         = 'active';
         $course_img     = "";
         if (!empty($_FILES['course_img']['name'][0])) {
@@ -403,6 +414,7 @@ class Pages extends Admin
             "uid"                   => $this->generate_uid(UID_COURSE),
             "course_name"           => $name,
             "course_description"    => $description,
+            "duration"              => $duration,
             "image"                 => $course_img,
             "status"                => $status,
         ];
@@ -431,11 +443,13 @@ class Pages extends Admin
         $id = $this->input->get('id');
         $title = $this->input->post('course_name');
         $description = $this->input->post('course_description');
+        $duration       = $this->input->post('course_duration');
 
         $this->init_model(MODEL_PAGES);
         $update_data = [
             "course_name" => $title,
             "course_description" => $description,
+            "duration" => $duration,
         ];
         if (!empty($_FILES['course_img']['name'][0])) {
             $blog_img_data = $this->upload_files('./uploads/course_img/', 'course_img', IMG_FILE_TYPES, IMG_FILE_SIZE);
@@ -533,12 +547,16 @@ class Pages extends Admin
         $th_numberr         = $this->input->post('theory_marks');
         $practical_number   = $this->input->post('practical_marks');
         $total              = $this->input->post('total');
+        $from              = $this->input->post('from');
+        $to                 = $this->input->post('to');
 
         $insert_data = [];
         $grand_total ="";
+        $len = count($subject);
         foreach($subject as $key=>$sub){
             $grand_total = intval($grand_total) + intval($total[$key]);
         }
+        $parcentage = ($grand_total/($len*100))*100;
         foreach($subject as $key=>$sub){
             $insert_data[] = array(
                 "uid" => $this->generate_uid(UID_RESULT),
@@ -549,6 +567,9 @@ class Pages extends Admin
                 "practical_marks" => $practical_number[$key],
                 "total" => $total[$key],
                 "grand_total" => $grand_total,
+                "parcentage" => $parcentage,
+                "start_date" => $from[0],
+                "end_date" => $to[0],
             );
         }
         // $this->prd($insert_data);
@@ -613,6 +634,16 @@ class Pages extends Admin
         if ($add_new_data) {
             redirect('contact');
         }
+    }
+
+    public function course(){
+        $id = $this->input->post('id');
+        
+        $this->init_model(MODEL_PAGES);
+        $data = PAGE_DATA_WEB;
+        // $data['data_header']['franchise_list'] = true;
+        $data['data_page']['course'] = $this->Pages_model->get_course_by_id($id);
+        $this->load_page('web/course.php',$data);
     }
 
 }

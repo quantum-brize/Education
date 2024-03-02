@@ -19,6 +19,7 @@
                                         <th>Sl No.</th>
                                         <th>Name</th>
                                         <th>Description</th>
+                                        <th>Duration</th>
                                         <th>Image</th>
                                         <th>Date</th>
                                         <th>Edit</th>
@@ -34,6 +35,7 @@
                                         <td><?= $i++?></td>
                                         <td><?= $course['course_name']?></td>
                                         <td><?= $course['course_description']?></td>
+                                        <td><?= $course['duration']?></td>
                                         <td><img src="<?= base_url($course['image'])?>" alt="" style="width: 100px;height: 80px;"></td>
                                         <td><?= $dateOnly?></td>
                                         <td><a href="<?= base_url('admin/Pages/course_update?id='.$course['uid'])?>" class="btn btn-info text-light">View & Edit</a></td>

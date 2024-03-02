@@ -108,18 +108,14 @@
                                         <?php }?>
                                         </div>
                                     </div>
+                                    <?php if($user_img != null){?>
                                     <a class="dropdown-item" href="instructor-dashboard.html"><i
-                                            class="feather-home me-1"></i> Dashboard</a>
+                                            class="<?php echo base_url('home')?>"></i> Home</a>
                                     <a class="dropdown-item" href="<?php echo base_url('edit-profile')?>"><i
                                             class="feather-star me-1"></i> Edit Profile</a>
-                                    <div class="dropdown-item night-mode">
-                                        <span><i class="feather-moon me-1"></i> Night Mode </span>
-                                        <div class="form-check form-switch check-on m-0">
-                                            <input class="form-check-input" type="checkbox" id="night-mode">
-                                        </div>
-                                    </div>
                                     <a class="dropdown-item" href="<?= base_url('admin/student-logout')?>"><i class="feather-log-out me-1"></i>
                                         Logout</a>
+                                    <?php }?>
                                 </div>
                             </li>
                         </ul>

@@ -1,42 +1,51 @@
 <script>
-    $("#downloadPDF").click(function () {
-    // $("#content2").addClass('ml-215'); // JS solution for smaller screen but better to add media queries to tackle the issue
-    getScreenshotOfElement(
-      $("div#content2").get(0),
-      0,
-      0,
-      $("#content2").width() + 45,  // added 45 because the container's (content2) width is smaller than the image, if it's not added then the content from right side will get cut off
-      $("#content2").height() + 30, // same issue as above. if the container width / height is changed (currently they are fixed) then these values might need to be changed as well.
-      function (data) {
-        console.log(data)
-        var pdf = new jsPDF("l", "pt", [
-          $("#content2").width(),
-          $("#content2").height(),
-        ]);
-  
-        pdf.addImage(
-          "data:image/png;base64," + data,
-          "PNG",
-          0,
-          0,
-          $("#content2").width(),
-          $("#content2").height()
-        );
-        pdf.save("azimuth-certificte.pdf");
-      }
-    );
-  });
+  // $(document).ready(function() {
+  //     $("#downloadPDF").click(function () {
+  //     // $("#content2").addClass('ml-215'); // JS solution for smaller screen but better to add media queries to tackle the issue
+  //     getScreenshotOfElement(
+  //       $("div#content2").get(0),
+  //       // console.log($("div#content2").get(0))
+  //       0,
+  //       0,
+  //       $("#content2").width() + 45,  // added 45 because the container's (content2) width is smaller than the image, if it's not added then the content from right side will get cut off
+  //       $("#content2").height() + 30, // same issue as above. if the container width / height is changed (currently they are fixed) then these values might need to be changed as well.
+  //       function (data) {
+  //         console.log(data)
+  //         var pdf = new jsPDF("l", "pt", [
+  //           $("#content2").width(),
+  //           $("#content2").height(),
+  //         ]);
+    
+  //         pdf.addImage(
+  //           "data:image/png;base64," + data,
+  //           "PNG",
+  //           0,
+  //           0,
+  //           $("#content2").width(),
+  //           $("#content2").height(),
+  //         );
+  //         pdf.save("azimuth-certificte.pdf");
+  //       }
+  //     );
+  //   });
+  // });
 
 
 
   // $(document).ready(function() {
+  //   var base_url = 'http://localhost/student_website/'
   //   $('#downloadPDF').click(function() {
-  //     html2canvas($('.cert')[0]).then(function(canvas) {
-  //       var imgData = canvas.toDataURL('image/png');
-  //       var pdf = new jsPDF('p', 'mm', 'a4');
-  //       pdf.addImage(imgData, 'PNG', 0, 0, 210, 297);
-  //       pdf.save("certificate.pdf");
-  //     });
+  //     // var htmlContent = document.getElementById('content2').innerHTML; // Get the HTML content by ID
+  //   $.ajax({
+  //       url: base_url+'web/Load/download_pdf', // Replace with your controller's URL and function name
+  //       type: 'GET',
+  //       success: function(response) {
+  //           console.log(response); // Handle the response from the controller if needed
+  //       },
+  //       error: function(xhr, status, error) {
+  //           console.error(xhr.responseText); // Handle any errors
+  //       }
+  //   });
   //   });
   // });
 

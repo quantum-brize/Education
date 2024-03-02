@@ -34,6 +34,20 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">From</label>
+                    <input type="date" class="form-control" name="from[]" placeholder="Enter subject name" required>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">To</label>
+                    <input type="date" class="form-control" name="to[]" placeholder="Enter subject name" required>
+                </div>
+            </div>
+        </div>
             <button type="button" onclick="add()" class="btn btn-primary">Add</button>
             <button type="button" onclick="remove()" class="btn btn-primary">Remove</button>
 

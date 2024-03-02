@@ -43,14 +43,14 @@
                         <h1>Engaging & Accessible Online Courses For All</h1>
                     </div>
                     <div class="banner-content">
-                        <form class="form" action="course-list">
+                        <form class="form" method="POST" action="<?php echo base_url('admin/Pages/course')?>">
                             <div class="form-inner">
                                 <div class="input-group">
                                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
                                     <input type="email" class="form-control"
                                         placeholder="Search courses.">
                                     <span class="drop-detail">
-                                        <select class="form-select select">
+                                        <select class="form-select select" name="id">
                                         <option>Courses</option>
                                         <?php
                                         if(!empty($courses)){

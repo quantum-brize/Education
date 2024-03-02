@@ -134,7 +134,9 @@ class Admin extends Common
                     $this->session->set_userdata(SES_STUDENT_EMAIL, $is_student[KEY_EMAIL]);
                     $this->session->set_userdata(SES_TYPE_STUDENT, $is_student[KEY_TYPE]);
 
-                } 
+                }else{
+                    $resp[KEY_STATUS] = false;
+                }
             }
         }
         $resp[KEY_MESSAGE] = $resp[KEY_STATUS] ? 'user found' : 'user not found';
@@ -179,7 +181,9 @@ class Admin extends Common
                     $this->session->set_userdata(SES_STUDENT_EMAIL, $is_student[KEY_EMAIL]);
                     $this->session->set_userdata(SES_TYPE_STUDENT, $is_student[KEY_TYPE]);
 
-                } 
+                }else{
+                    $resp[KEY_STATUS] = false;
+                }
             }
         }
         $resp[KEY_MESSAGE] = $resp[KEY_STATUS] ? 'user found' : 'user not found';

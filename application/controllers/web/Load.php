@@ -4,7 +4,7 @@ require_once(APPPATH.'controllers/Common.php');
 
 // Include autoloader
 require 'vendor/autoload.php';
-use Dompdf\Dompdf;
+// use Dompdf\Dompdf;
 
 
 class Load extends Common {
@@ -50,6 +50,7 @@ class Load extends Common {
         $this->init_model(MODEL_PAGES);
         $data = PAGE_DATA_WEB;
         $data['data_header']['franchise_list'] = true;
+        $data['data_page']['centres'] = $this->Pages_model->get_all_centres();
         $this->load_page('web/franchise_list.php',$data);
     }
     public function course(){
@@ -195,8 +196,8 @@ class Load extends Common {
     public function cirtificate(){
         if($this->session->userdata(SES_STUDENT_ID) != null && $this->session->userdata(SES_STUDENT_EMAIL) != null && $this->session->userdata(SES_TYPE_STUDENT) == 'student'){
             $this->init_model(MODEL_PAGES);
-            $data['student'] = $this->Pages_model->get_student_marks_by_id($this->session->userdata(SES_STUDENT_ID));
-            // $this->prd($data['student'][0]['course_name']);
+            $data['student'] = $this->Pages_model->get_student_details_by_id($this->session->userdata(SES_STUDENT_ID));
+            // $this->prd($data['student']);
             $this->load->view('web/cirtificate.php', $data);
             $this->load->view('web/inc/js/cirtificate_js.php');
         }else{
@@ -218,33 +219,13 @@ class Load extends Common {
 
 
  public function download_pdf(){
-    $html = file_get_contents(base_url('cirtificate'));
+    // $html_content   = $this->input->post('html_content');
+    $html='<h2> Hello World</h2>';
+    // $this->prd($html);
+   $mpdf = new Mpdf\Mpdf();
+    $mpdf->writeHTML($html);
+    $mpdf->Output();
 
-    // Create an instance of the DOMPDF class
-    $dompdf = new Dompdf();
-
-    // Load HTML content
-    $dompdf->loadHtml($html);
-
-    // Set paper size and orientation
-    $dompdf->setPaper('A4', 'portrait');
-
-    // Render the HTML as PDF
-    $dompdf->render();
-
-    // Output the generated PDF to a file
-    $pdfContent = $dompdf->output();
-
-    // Set headers for download
-    header('Content-Description: File Transfer');
-    header('Content-Type: application/pdf');
-    header('Content-Disposition: attachment; filename="downloaded_pdf.pdf"');
-    header('Content-Length: ' . strlen($pdfContent));
-    header('Cache-Control: private, max-age=0, must-revalidate');
-    header('Pragma: public');
-
-    // Output the PDF content
-    echo $pdfContent;
  }
     
 

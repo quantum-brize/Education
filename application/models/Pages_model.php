@@ -46,7 +46,7 @@ class Pages_model extends Admin_model
     }
 
     public function get_all_centres() {
-        $this->db->select('u.*, cn.uid as centre_id,cn.franchise_type,cn.centre_name, ad.state,ad.district,ad.vill_city,ad.block');
+        $this->db->select('u.*, cn.uid as centre_id,cn.franchise_type,cn.centre_name, ad.state,ad.district,ad.vill_city,ad.block,cn.contact');
         $this->db->from('users as u');
         $this->db->join('centre as cn', 'cn.user_id = u.uid');
         $this->db->join('address as ad', 'ad.user_id = u.uid');
@@ -195,7 +195,21 @@ class Pages_model extends Admin_model
     }
 
     public function get_student_marks_by_id($id) {
-        $this->db->select('u.uid as user_id,u.name,rs.*, c.course_name,s.fathers_name');
+        $this->db->select('u.uid as user_id,u.name,rs.*, c.course_name');
+        $this->db->from('results as rs');
+        $this->db->join('course as c', 'c.uid = rs.course_id');
+        $this->db->join('users as u', 'u.uid = rs.students_id');
+        $this->db->join('student as s', 'u.uid = s.user_id');
+        $this->db->where('rs.students_id', $id);
+        $query = $this->db->get();
+        $donations = $query->result_array();
+        // $this->prd($donations);
+        return !empty($donations) ? $donations : [];
+        
+    }
+
+    public function get_student_details_by_id($id) {
+        $this->db->select('u.*, rs.*,c.*,s.*');
         $this->db->from('results as rs');
         $this->db->join('course as c', 'c.uid = rs.course_id');
         $this->db->join('users as u', 'u.uid = rs.students_id');
@@ -274,6 +288,19 @@ class Pages_model extends Admin_model
 
         $notices = $notices->result_array();
         return isset($notices) ? $notices : [];
+    }
+
+
+    public function get_all_enroled_courses() {
+        $this->db->select('u.*, c.*');
+        $this->db->from('enroled_course as ec');
+        $this->db->join('users as u', 'u.uid = ec.user_id');
+        $this->db->join('course as c', 'c.uid = ec.course_id');
+        $query = $this->db->get();
+        $enroled_courses = $query->result_array();
+        // $this->prd($donations);
+        return !empty($enroled_courses) ? $enroled_courses : [];
+        
     }
 
 }

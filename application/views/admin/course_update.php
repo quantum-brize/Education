@@ -14,6 +14,10 @@
                     <textarea rows="6" cols="30" class="form-control" required
                         name="course_description"><?= $course['course_description']?></textarea>
                 </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Course Duration</label>
+                    <input type="text" class="form-control" name="course_duration" value="<?= $course['duration']?>" required>
+                </div>
             </div>
             <div class="col-xl-6 col-lg-6">
                 <div class='form-group' id="aboutCourse">

@@ -40,6 +40,7 @@ $route['admin/add-notice']          = 'admin/Pages/notice_add';
 $route['admin/results']             = 'admin/Pages/results';
 $route['admin/creat-result']        = 'admin/Pages/creat_result';
 $route['admin/get-in-touches']      = 'admin/Pages/get_in_touches';
+$route['admin/enroled-courses']     = 'admin/Pages/enroled_courses';
 
 
 

@@ -7,7 +7,7 @@
 
                     <div class="footer-widget footer-about">
                         <div class="footer-logo">
-                            <img src="assets/img/logo.svg" alt="logo">
+                            <img src="<?= base_url()?>assets/img/logo.svg" alt="logo">
                         </div>
                         <div class="footer-about-content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat mauris Lorem
