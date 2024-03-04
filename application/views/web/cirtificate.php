@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience Certificate Generator</title>
   <!-- <link rel="stylesheet" href="styles.css"> -->
-  <link rel="stylesheet" href="<?=base_url()?>assets/css/styles_cirtificate_centre.css">
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/styles_cirtificate.css">
 </head>
 <style>
     /* Basic button style */
@@ -32,18 +32,15 @@ a.button:hover {
         <!-- <button class="btn btn-info" onclick="window.print()">
             Print Certificate
         </button> -->
-        <!-- <button class="btn btn-info" id="downloadPDF">Download PDF</button> -->
-       <a href="<?= base_url('web/Load/download_pdf')?>" class="button">Download PDF</a>
+        <button class="btn btn-info" onclick="generatePDF()" id="downloadPDF">Download PDF</button>
+        <!-- <button class="btn btn-info" onclick="generatePDF()" id="downloadPDF">Download PDF</button> -->
+       <!-- <a href="<?= base_url('web/Load/download_pdf')?>" class="button">Download PDF</a> -->
     </div>
     <div class="cert-container print-m-0">
-      <div id="content2" class="cert">
-        <img
-          src="https://edgarsrepo.github.io/certificate.png"
-          class="cert-bg"
-          alt="" style="position: absolute; height: 200%;"
-        />
+      <div id="content2" class="cert certificate">
+        <img src="<?= base_url('uploads/cirtificate_img.png')?>" class="cert-bg" alt="" />
         <div class="cert-content" style="margin-top:50px;">
-            <!-- <h1 class="other-font">Zcc Computer Education</h1>
+            <h1 class="other-font">Zcc Computer Education</h1>
             <span style="font-size: 15px;">[An Institute of Computer And IT education]</span><br>
             <span style="font-size: 15px; font-weight: bold">Regd. Under Ministry of Affairs By Govt. of
                 India</span><br>
@@ -99,7 +96,7 @@ a.button:hover {
           <div class="bottom-txt">
             <span>G-1 DAPE-ARR-SF</span>
             <span>Completed on: April 3, 2020</span>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -108,5 +105,6 @@ a.button:hover {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </body>
 </html>

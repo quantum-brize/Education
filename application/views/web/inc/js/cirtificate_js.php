@@ -1,34 +1,44 @@
 <script>
-  // $(document).ready(function() {
-  //     $("#downloadPDF").click(function () {
-  //     // $("#content2").addClass('ml-215'); // JS solution for smaller screen but better to add media queries to tackle the issue
-  //     getScreenshotOfElement(
-  //       $("div#content2").get(0),
-  //       // console.log($("div#content2").get(0))
-  //       0,
-  //       0,
-  //       $("#content2").width() + 45,  // added 45 because the container's (content2) width is smaller than the image, if it's not added then the content from right side will get cut off
-  //       $("#content2").height() + 30, // same issue as above. if the container width / height is changed (currently they are fixed) then these values might need to be changed as well.
-  //       function (data) {
-  //         console.log(data)
-  //         var pdf = new jsPDF("l", "pt", [
-  //           $("#content2").width(),
-  //           $("#content2").height(),
-  //         ]);
+  $(document).ready(function() {
+      $("#downloadPDF").click(function () {
+      // $("#content2").addClass('ml-215'); // JS solution for smaller screen but better to add media queries to tackle the issue
+      getScreenshotOfElement(
+        $("div#content2").get(0),
+        // console.log($("div#content2").get(0))
+        0,
+        0,
+        $("#content2").width() + 45,  // added 45 because the container's (content2) width is smaller than the image, if it's not added then the content from right side will get cut off
+        $("#content2").height() + 30, // same issue as above. if the container width / height is changed (currently they are fixed) then these values might need to be changed as well.
+        function (data) {
+          console.log(data)
+          var pdf = new jsPDF("l", "pt", [
+            $("#content2").width(),
+            $("#content2").height(),
+          ]);
     
-  //         pdf.addImage(
-  //           "data:image/png;base64," + data,
-  //           "PNG",
-  //           0,
-  //           0,
-  //           $("#content2").width(),
-  //           $("#content2").height(),
-  //         );
-  //         pdf.save("azimuth-certificte.pdf");
-  //       }
-  //     );
-  //   });
-  // });
+          pdf.addImage(
+            "data:image/png;base64," + data,
+            "PNG",
+            0,
+            0,
+            $("#content2").width(),
+            $("#content2").height(),
+          );
+          pdf.save("azimuth-certificte.pdf");
+        }
+      );
+    });
+  });
+
+//   document.getElementById('downloadPDF').addEventListener('click', function() {
+//   html2canvas(document.querySelector('.certificate')).then(function(canvas) {
+//     var imgData = canvas.toDataURL('image/png');
+//     var pdf = new jsPDF();
+//     pdf.addImage(imgData, 'PNG', 0, 0, 210, 297); // A4 size: 210x297mm
+//     pdf.save('certificate.pdf');
+//   });
+// });
+
 
 
 

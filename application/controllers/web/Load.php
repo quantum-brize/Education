@@ -221,7 +221,19 @@ class Load extends Common {
 
  public function download_pdf(){
     // $html_content   = $this->input->post('html_content');
-    $html='<h2 style="color:red"> Hello World</h2>';
+    $html='
+    <div class="cert-container print-m-0">
+        <div id="content2" class="cert">
+            <img src="http://localhost/student_website/uploads/cirtificate_img.png" class="cert-bg" alt="" style="position: absolute; height: 200%;"/>
+            <div class="cert-content" style="margin-top:50px;">
+                <h1 class="other-font">Zcc Computer Education</h1>
+                <span style="font-size: 15px;">[An Institute of Computer And IT education]</span><br>
+                <span style="font-size: 15px; font-weight: bold">Regd. Under Ministry of Affairs By Govt. of
+                India</span><br>
+            </div>
+        </div>
+    </div>
+    ';
     // $this->prd($html);
    $mpdf = new Mpdf\Mpdf();
     $mpdf->writeHTML($html);
