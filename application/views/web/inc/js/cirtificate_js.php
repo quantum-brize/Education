@@ -11,9 +11,9 @@
         $("#content2").height() + 30, // same issue as above. if the container width / height is changed (currently they are fixed) then these values might need to be changed as well.
         function (data) {
           console.log(data)
-          var pdf = new jsPDF("l", "pt", [
-            $("#content2").width(),
-            $("#content2").height(),
+          var pdf = new jsPDF("p", "pt", [
+              $("#content2").width(),
+              $("#content2").height(),
           ]);
     
           pdf.addImage(
