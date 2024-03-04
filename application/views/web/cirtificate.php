@@ -29,9 +29,9 @@ a.button:hover {
 <body>
 
     <div class="toolbar no-print">
-        <!-- <button class="btn btn-info" onclick="window.print()">
+        <button class="btn btn-info" onclick="window.print()">
             Print Certificate
-        </button> -->
+        </button>
         <button class="btn btn-info" onclick="generatePDF()" id="downloadPDF">Download PDF</button>
         <!-- <button class="btn btn-info" onclick="generatePDF()" id="downloadPDF">Download PDF</button> -->
        <!-- <a href="<?= base_url('web/Load/download_pdf')?>" class="button">Download PDF</a> -->

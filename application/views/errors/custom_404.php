@@ -9,7 +9,7 @@
                 <h1 class="mb-4 text-dark">Page Not Found</h1>
                 <p class="mb-4 text-dark">We’re sorry, the page you have looked for does not exist in our website!
                     Maybe go to our home page or try to use a search?</p>
-                <a class="btn btn-primary btn-hover-bg py-3 px-5" href="index.html">Go Back To Home</a>
+                <a class="btn btn-primary btn-hover-bg py-3 px-5" href="<?= base_url('home')?>">Go Back To Home</a>
             </div>
         </div>
     </div>
