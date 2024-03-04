@@ -303,4 +303,23 @@ class Pages_model extends Admin_model
         
     }
 
+    public function add_testimonial($insert_data)
+    {
+        $add_data = $this->db->insert(TABLE_TESTIMONIAL, $insert_data);
+        if($add_data){
+            return $add_data;
+        }
+    }
+
+    public function get_all_testimonials()
+    {
+        $testimonials = $this->db
+            ->select('*')
+            ->from(TABLE_TESTIMONIAL)
+            ->get();
+
+        $testimonials = $testimonials->result_array();
+        return isset($testimonials) ? $testimonials : [];
+    }
+
 }

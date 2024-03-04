@@ -18,6 +18,7 @@ class Load extends Common {
         $data['data_header']['home'] = true;
         $data['data_page']['courses'] = $this->Pages_model->get_all_courses();
         $data['data_page']['notices'] = $this->Pages_model->get_all_notices();
+        $data['data_page']['testimonials'] = $this->Pages_model->get_all_testimonials();
         $this->load_page('web/index.php',$data);
     }
 
@@ -220,7 +221,7 @@ class Load extends Common {
 
  public function download_pdf(){
     // $html_content   = $this->input->post('html_content');
-    $html='<h2> Hello World</h2>';
+    $html='<h2 style="color:red"> Hello World</h2>';
     // $this->prd($html);
    $mpdf = new Mpdf\Mpdf();
     $mpdf->writeHTML($html);

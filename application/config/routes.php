@@ -41,6 +41,8 @@ $route['admin/results']             = 'admin/Pages/results';
 $route['admin/creat-result']        = 'admin/Pages/creat_result';
 $route['admin/get-in-touches']      = 'admin/Pages/get_in_touches';
 $route['admin/enroled-courses']     = 'admin/Pages/enroled_courses';
+$route['admin/testimonial']         = 'admin/Pages/testimonial';
+$route['admin/testimonial-add']     = 'admin/Pages/testimonial_add';
 
 
 

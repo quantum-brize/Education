@@ -68,6 +68,7 @@ define('TABLE_NOTICE', 'notices');
 define('TABLE_ENROLED_COURSE', 'enroled_course');
 define('TABLE_RESULTS', 'results');
 define('TABLE_GET_IN_TOUCH', 'get_in_touch');
+define('TABLE_TESTIMONIAL', 'testimonial');
 
 
 ////////////////////////////////////////////__SESSION_VARS
@@ -107,6 +108,7 @@ define('UID_NOTICE', 'NOT');
 define('UID_ENROLED', 'ENROL');
 define('UID_RESULT', 'RS');
 define('UID_GET_IN_TOUCH', 'GNT');
+define('UID_TESTIMONIAL', 'TSTMNL');
 
 
 

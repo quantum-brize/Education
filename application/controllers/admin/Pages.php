@@ -160,6 +160,26 @@ class Pages extends Admin
         $this->is_auth('admin/enroled_courses.php',$data);
     }
 
+    public function testimonial(){
+        $this->init_model(MODEL_PAGES);
+        $data = PAGE_DATA_ADMIN;
+        $data['data_footer']['footer_link']=['testimonial_js.php'];
+        $data['data_header']['testimonial'] = true;
+        $data['data_page']['testimonials'] = $this->Pages_model->get_all_testimonials();
+
+        $this->is_auth('admin/testimonial.php',$data);
+    }
+
+    public function testimonial_add(){
+        $this->init_model(MODEL_PAGES);
+        $data = PAGE_DATA_ADMIN;
+        $data['data_footer']['footer_link']=['testimonial_js.php'];
+        $data['data_header']['testimonial'] = true;
+        // $data['data_page']['testimonial'] = $this->Pages_model->get_all_enroled_courses();
+
+        $this->is_auth('admin/testimonial_add.php',$data);
+    }
+
     public function add_admin(){
         $insert_users = [
             "uid"       => $this->generate_uid(UID_USER),
@@ -644,6 +664,32 @@ class Pages extends Admin
         // $data['data_header']['franchise_list'] = true;
         $data['data_page']['course'] = $this->Pages_model->get_course_by_id($id);
         $this->load_page('web/course.php',$data);
+    }
+
+    public function add_new_testimonial()
+    {
+        $name           = $this->input->post('name');
+        $type          = $this->input->post('type');
+        $description          = $this->input->post('description');
+        $testimonial_img = "";
+        if (!empty($_FILES['testimonial_img']['name'][0])) {
+            $testimonial_img_data = $this->upload_files('./uploads/testimonial_img/', 'testimonial_img', IMG_FILE_TYPES, IMG_FILE_SIZE);
+            $testimonial_img = '/uploads/testimonial_img/' . $testimonial_img_data['file_name'];
+        }
+        $insert_data = [
+            "uid"           => $this->generate_uid(UID_TESTIMONIAL),
+            "name"          => $name,
+            "type"          => $type,
+            "description"   => $description,
+            "img"           => $testimonial_img,
+        ];
+
+        $this->init_model(MODEL_PAGES);
+        $add_new_data = $this->Pages_model->add_testimonial($insert_data);
+
+        if ($add_new_data) {
+            redirect('admin/testimonial');
+        }
     }
 
 }
