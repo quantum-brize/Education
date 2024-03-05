@@ -43,6 +43,17 @@ class Pages extends Admin
         $this->is_auth('admin/centres.php',$data);
     }
 
+    public function centre_details(){
+        $id = $this->input->get('id');
+        $this->init_model(MODEL_PAGES);
+        $data = PAGE_DATA_ADMIN;
+        $data['data_footer']['footer_link'] = ['centre_js.php'];
+        $data['data_header']['centres'] = true;
+        $data['data_page']['centres'] = $this->Pages_model->get_centre_details_by_id($id);
+
+        $this->is_auth('admin/centre_details.php',$data);
+    }
+
     public function admin_students(){
         $this->init_model(MODEL_PAGES);
         $data = PAGE_DATA_ADMIN;
@@ -538,7 +549,7 @@ class Pages extends Admin
         $id = $this->input->post('id');
         $uid = $this->session->userdata(SES_STUDENT_ID);
         $email = $this->session->userdata(SES_STUDENT_EMAIL);
-        $type = $this->session->userdata(SES_TYPE);
+        $type = $this->session->userdata(SES_TYPE_STUDENT);
         
         if(!empty($uid) && !empty($email) && $type == 'student'){
             $insert_data = [
@@ -551,9 +562,9 @@ class Pages extends Admin
             $add_new_enrolement = $this->Pages_model->add_new_enrolement($insert_data);
     
             if ($add_new_enrolement) {
-                return json_encode(array("status"=> true, "msg" =>'success' ));
+                echo json_encode(array("status"=> true, "msg" =>'Enroled Successful' ));
             }else{
-                return json_encode(array("status"=> true, "msg" =>'faild' ));
+                echo json_encode(array("status"=> true, "msg" =>'Enrolement Faild' ));
             }
         }else{
             echo json_encode(array("status"=> false, "msg" =>'Please login!' ));

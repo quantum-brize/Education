@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Dreams LMS</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?=base_url()?>assets/img/favicon.svg">
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apvarun/toastify-js/src/toastify.css">
+
+    <!-- Toastify JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/apvarun/toastify-js/src/toastify.js"></script>
+
 
     <script src="<?=base_url()?>assets/js/jquery-3.6.0.min.js" type="fdc0b48d23ba16f3238edcb7-text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

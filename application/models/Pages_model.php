@@ -268,7 +268,7 @@ class Pages_model extends Admin_model
     }
 
     public function get_centre_details_by_id($id) {
-        $this->db->select('u.*, cn.*, ad.contact as residential_contact');
+        $this->db->select('u.*, cn.*, ad.contact as residential_contact, ad.state as residential_state, ad.district as residential_district, ad.vill_city, ad.block as residential_block, ad.post_office as residential_post_office, ad.police_station as residential_police_station, ad.pin as residential_pin');
         $this->db->from('users as u');
         $this->db->join('centre as cn', 'cn.user_id = u.uid');
         $this->db->join('address as ad', 'ad.user_id = u.uid');

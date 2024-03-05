@@ -155,7 +155,13 @@
                         console.log(resp)
                         location.href = '<?= base_url('get-cirtificate') ?>'
                     }else{
-                        alert('User Not Found!')
+                        Toastify({
+                            text: 'User not found!'.toUpperCase(),
+                            duration: 3000, // Adjust as needed
+                            position: "center",
+                            close: true,
+                            backgroundColor: resp.status ? "green" : "red" // Example: green for success, red for error
+                        }).showToast();
                     }
                 },
                 error: function(xhr, status, error){

@@ -22,6 +22,7 @@
                                         <th>Centre Name</th>
                                         <th>Date</th>
                                         <th>status</th>
+                                        <th>View</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -29,7 +30,7 @@
                                         if($centre['status'] == 'active'){
                                             $i=1;
                                             $dateTime = new DateTime($centre['created_at']); 
-                                            $dateOnly = $dateTime->format('d-m-Y');    
+                                            $dateOnly = $dateTime->format('d-m-Y');
                                     ?>
                                     <tr>
                                         <td><?= $i++?></td>
@@ -47,6 +48,7 @@
                                                 <option value="inactive">Inactive</option>
                                             </select>
                                         </td>
+                                        <td><a href="<?= base_url('admin/Pages/centre_details?id='.$centre['uid'])?>" class="btn btn-success" role="button">view</a></td>
                                     </tr>
                                     <?php } } ?>
                                     <!-- Add more rows as needed -->

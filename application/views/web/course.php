@@ -38,9 +38,21 @@
 
                    
                     if (resp.status ) {
-                        alert('Enrilement Successfully submitted');
+                        Toastify({
+                            text: resp.msg.toUpperCase(),
+                            duration: 3000, // Adjust as needed
+                            position: "center",
+                            close: true,
+                            backgroundColor: resp.status ? "green" : "red" // Example: green for success, red for error
+                        }).showToast();
                     }else{
-                        alert(resp.msg)
+                        Toastify({
+                                text: resp.msg.toUpperCase(),
+                                duration: 3000, // Adjust as needed
+                                position: "center",
+                                close: true,
+                                backgroundColor: resp.status ? "green" : "red" // Example: green for success, red for error
+                            }).showToast();
                     }
                 },
                 error: function(xhr, status, error){

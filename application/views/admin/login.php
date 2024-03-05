@@ -20,6 +20,11 @@
     <link rel="stylesheet" href="<?=base_url()?>assets/plugins/dropzone/dropzone.min.css">
     <link rel="stylesheet" href="<?=base_url()?>assets/plugins/aos/aos.css">
     <link rel="stylesheet" href="<?=base_url()?>assets/css/style.css">
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apvarun/toastify-js/src/toastify.css">
+
+    <!-- Toastify JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/apvarun/toastify-js/src/toastify.js"></script>
     <style>
     [wire\:loading],
     [wire\:loading\.delay],
@@ -196,28 +201,25 @@
                     },
                     success: function(response){
                         resp = JSON.parse(response)
-                        // Toastify({
-                        //     text: resp.message.toUpperCase(),
-                        //     duration: 3000,
-                        //     position: "center",
-                        //     stopOnFocus: true,
-                        //     style: {
-                        //         background: resp.status ? 'darkgreen' : 'darkred',
-                        //     },
-
-                        // }).showToast();
                         if (resp.status && resp.role == 'admin') {
+                            Toastify({
+                                text: 'Login successful'.toUpperCase(),
+                                duration: 3000, // Adjust as needed
+                                position: "center",
+                                close: true,
+                                backgroundColor: resp.status ? "green" : "red" // Example: green for success, red for error
+                            }).showToast();
                             setTimeout(function () {
                                 location.href = '<?= base_url('admin/home') ?>'
                             }, 1000)
-                        }else if (resp.status && resp.role == 'centre') {
-                            setTimeout(function () {
-                                location.href = '<?= base_url('home') ?>'
-                            }, 1000)
-                        }else if (resp.status && resp.role == 'student') {
-                            setTimeout(function () {
-                                location.href = '<?= base_url('home') ?>'
-                            }, 1000)
+                        }else{
+                            Toastify({
+                                text: 'User not found!'.toUpperCase(),
+                                duration: 3000, // Adjust as needed
+                                position: "center",
+                                close: true,
+                                backgroundColor: resp.status ? "green" : "red" // Example: green for success, red for error
+                            }).showToast();
                         }
                     },
                     error: function(xhr, status, error){

@@ -975,14 +975,25 @@
                     success: function(response){
                         resp = JSON.parse(response)
                         if (resp.status) {
-                            alert('Login successful')
-                            // $('#userEmailStudent').val("")
-                            // $('#passwordStudent').val("")
+                            Toastify({
+                                text: 'Login successful'.toUpperCase(),
+                                duration: 3000, // Adjust as needed
+                                position: "center",
+                                close: true,
+                                backgroundColor: resp.status ? "green" : "red" // Example: green for success, red for error
+                            }).showToast();
                             setTimeout(function () {
                                 location.href = '<?= base_url('home') ?>'
                             }, 1000)
                         }else{
-                            alert('User not found!')
+                            Toastify({
+                                text: 'User not found!'.toUpperCase(),
+                                duration: 3000, // Adjust as needed
+                                position: "center",
+                                close: true,
+                                backgroundColor: resp.status ? "green" : "red" // Example: green for success, red for error
+                            }).showToast();
+                            // alert('User not found!')
                         }
                     },
                     error: function(xhr, status, error){
@@ -1006,14 +1017,27 @@
                     success: function(response){
                         resp = JSON.parse(response)
                         if (resp.status) {
-                            alert('Login successful')
+                            Toastify({
+                                text: 'Login successful'.toUpperCase(),
+                                duration: 3000, // Adjust as needed
+                                position: "center",
+                                close: true,
+                                backgroundColor: resp.status ? "green" : "red" // Example: green for success, red for error
+                            }).showToast();
+                            // alert('Login successful')
                             // $('#userEmailStudent').val("")
                             // $('#passwordStudent').val("")
                             setTimeout(function () {
                                 location.href = '<?= base_url('home') ?>'
                             }, 1000)
                         }else{
-                            alert('User not found!')
+                            Toastify({
+                                text: 'User not found!'.toUpperCase(),
+                                duration: 3000, // Adjust as needed
+                                position: "center",
+                                close: true,
+                                backgroundColor: resp.status ? "green" : "red" // Example: green for success, red for error
+                            }).showToast();
                         }
                     },
                     error: function(xhr, status, error){
