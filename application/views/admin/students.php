@@ -49,6 +49,7 @@
                                                 <option value="inactive">Inactive</option>
                                             </select>
                                         </td>
+                                        <td><a href="<?= base_url('admin/Pages/student_details?id='.$student['uid'])?>" class="btn btn-success" role="button">view</a></td>
                                     </tr>
                                     <?php } } ?>
                                     <!-- Add more rows as needed -->
@@ -96,6 +97,7 @@
                                                 <option value="inactive">Inactive</option>
                                             </select>
                                         </td>
+                                        <td><a href="<?= base_url('admin/Pages/student_details?id='.$student['uid'])?>" class="btn btn-success" role="button">view</a></td>
                                     </tr>
                                     <?php } } ?>
                                     <!-- Add more rows as needed -->
@@ -144,6 +146,7 @@
                                                 <option value="inactive">Inactive</option>
                                             </select>
                                         </td>
+                                        <td><a href="<?= base_url('admin/Pages/student_details?id='.$student['uid'])?>" class="btn btn-success" role="button">view</a></td>
                                     </tr>
                                     <?php } } ?>
                                     <!-- Add more rows as needed -->

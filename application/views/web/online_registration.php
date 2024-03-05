@@ -23,44 +23,44 @@
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="">Referral ID (Branch Code):</label>
-                                <input type="text" class="form-control" name="ref_id" id="ref_id" placeholder="Don't fill in if you don't know" value="123">
+                                <input type="text" class="form-control" name="ref_id" id="ref_id" placeholder="Don't fill in if you don't know">
                             </div>
                         </div>
                         
                         <div class="row fullwidth">
                             <div class="form-group col-sm-4">
                                 <label for="">Centre Name:</label>
-                                <input type="text" class="form-control" name="centre_name" id="centre_name" required value="Subhankar Study Centre">
+                                <input type="text" class="form-control" name="centre_name" id="centre_name" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Director's Name:</label>
-                                <input type="text" class="form-control" name="directors_name" id="directors_name" required value="Subhankar Sharma">
+                                <input type="text" class="form-control" name="directors_name" id="directors_name" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Father's Name:</label>
-                                <input type="text" class="form-control" name="fathers_name" id="fathers_name" required value="Sukumar Sharma">
+                                <input type="text" class="form-control" name="fathers_name" id="fathers_name" required>
                             </div>
                         </div>
 
                         <div class="row fullwidth">
                             <div class="form-group col-sm-4">
                                 <label for="">Date of Birth:</label>
-                                <input type="date" class="form-control" name="dob" id="dob" required value="15-01-2002">
+                                <input type="date" class="form-control" name="dob" id="dob" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Contact No.:</label>
-                                <input type="number" class="form-control" name="contact" id="contact" required value="9679377775">
+                                <input type="number" class="form-control" name="contact" id="contact" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">E-mail:</label>
-                                <input type="email" class="form-control" name="email" id="email" required value="subhankar12@gmail.com">
+                                <input type="email" class="form-control" name="email" id="email" required>
                             </div>
                         </div>
 
                         <div class="row fullwidth">
                             <div class="form-group col-sm-6">
                                 <label for="">Password:</label>
-                                <input type="password" class="form-control" name="password" id="password" required value="12345678">
+                                <input type="password" class="form-control" name="password" id="password" required>
                             </div>
                         </div>
 
@@ -106,52 +106,52 @@
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">District:</label>
-                                <input type="text" class="form-control" name="centre_district" id="centre_district" required value="Hooghly">
+                                <input type="text" class="form-control" name="centre_district" id="centre_district" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Centre Place:</label>
-                                <input type="text" class="form-control" name="centre_place" id="centre_place" required value="Tarakeswar">
+                                <input type="text" class="form-control" name="centre_place" id="centre_place" required>
                             </div>
                         </div>
 
                         <div class="row fullwidth">
                             <div class="form-group col-sm-4">
                                 <label for="">Block:</label>
-                                <input type="text" class="form-control" name="centre_block" id="centre_block" required value="Tarakeswar">
+                                <input type="text" class="form-control" name="centre_block" id="centre_block" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Post Office:</label>
-                                <input type="text" class="form-control" name="centre_post_office" id="post_office" required value="Tarakeswar">
+                                <input type="text" class="form-control" name="centre_post_office" id="post_office" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Police Station:</label>
-                                <input type="text" class="form-control" name="centre_police_station" id="police_station" required value="Tarakeswar">
+                                <input type="text" class="form-control" name="centre_police_station" id="police_station" required>
                             </div>
                         </div>
 
                         <div class="row fullwidth">
                             <div class="form-group col-sm-6">
                                 <label for="">Pin Code:</label>
-                                <input type="number" class="form-control" name="centre_pin_code" id="pin_code" required value="712410">
+                                <input type="number" class="form-control" name="centre_pin_code" id="pin_code" required>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="">Contact No.:</label>
-                                <input type="number" class="form-control" name="centre_contact_no" id="contact_no" required value="9679377775">
+                                <input type="number" class="form-control" name="centre_contact_no" id="contact_no" required>
                             </div>
                         </div>
 
                         <div class="row fullwidth">
                             <div class="form-group col-sm-4">
                                 <label for="">Total Area (in sqft):</label>
-                                <input type="text" class="form-control" name="total_area" id="total_area" required value="2000">
+                                <input type="text" class="form-control" name="total_area" id="total_area" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Total No. Of Computers:</label>
-                                <input type="number" class="form-control" name="number_of_computers" id="number_of_computers" required value="50">
+                                <input type="number" class="form-control" name="number_of_computers" id="number_of_computers" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Total Staff:</label>
-                                <input type="number" class="form-control" name="total_staff" id="total_staff" value="28">
+                                <input type="number" class="form-control" name="total_staff" id="total_staff">
                             </div>
                         </div>
 
@@ -197,37 +197,37 @@
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">District:</label>
-                                <input type="text" class="form-control" name="res_district" id="district" required value="Hooghly">
+                                <input type="text" class="form-control" name="res_district" id="district" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Vill / Tahsil:</label>
-                                <input type="text" class="form-control" name="res_vill" id="centre_place" required value="Tarakeswar">
+                                <input type="text" class="form-control" name="res_vill" id="centre_place" required>
                             </div>
                         </div>
 
                         <div class="row fullwidth">
                             <div class="form-group col-sm-4">
                                 <label for="">Block:</label>
-                                <input type="text" class="form-control" name="res_block" id="block" required value="Tarakeswar">
+                                <input type="text" class="form-control" name="res_block" id="block" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Post Office:</label>
-                                <input type="text" class="form-control" name="res_post_office" id="post_office" required value="Tarakeswar">
+                                <input type="text" class="form-control" name="res_post_office" id="post_office" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Police Station:</label>
-                                <input type="text" class="form-control" name="res_police_station" id="police_station" required value="Tarakeswar">
+                                <input type="text" class="form-control" name="res_police_station" id="police_station" required>
                             </div>
                         </div>
 
                         <div class="row fullwidth">
                             <div class="form-group col-sm-6">
                                 <label for="">Pin Code:</label>
-                                <input type="number" class="form-control" name="res_pin_code" id="pin_code" required value="712410">
+                                <input type="number" class="form-control" name="res_pin_code" id="pin_code" required>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="">Contact No.:</label>
-                                <input type="number" class="form-control" name="res_contact_no" id="contact_no" required value="9679377775">
+                                <input type="number" class="form-control" name="res_contact_no" id="contact_no" required>
                             </div>
                         </div>
 

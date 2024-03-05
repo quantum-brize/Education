@@ -64,6 +64,17 @@ class Pages extends Admin
         $this->is_auth('admin/students.php',$data);
     }
 
+    public function student_details(){
+        $id = $this->input->get('id');
+        $this->init_model(MODEL_PAGES);
+        $data = PAGE_DATA_ADMIN;
+        $data['data_footer']['footer_link'] = ['student_js.php'];
+        $data['data_header']['student_list'] = true;
+        $data['data_page']['students'] = $this->Pages_model->get_student_details($id);
+
+        $this->is_auth('admin/student_details.php',$data);
+    }
+
     public function courses(){
         $this->init_model(MODEL_PAGES);
         $data = PAGE_DATA_ADMIN;
@@ -427,6 +438,17 @@ class Pages extends Admin
         $update_data = $this->Pages_model->update_centre_status($user_id, $status);
         $resp = ['success' => true, 'msg' => $update_data];
         return $this->response($resp);
+    }
+
+    public function update_status_centre_details(){
+        $id = $this->input->get('id');
+        $status = $this->input->post('update_status');
+        $this->prd($id);
+        $this->init_model(MODEL_PAGES);
+        $update_data = $this->Pages_model->update_centre_status($id, $status);
+        if($update_data){
+            redirect('admin/centre-details');
+        }
     }
 
     public function course_add()

@@ -13,26 +13,26 @@
                         <div class="row fullwidth">
                             <div class="form-group col-sm-6">
                                 <label for="">Full Name:</label>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Full Name" value="Rohit" required>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Full Name"required>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="">Father's Name:</label>
-                                <input type="text" class="form-control" name="fathers_name" id="fathers_name" placeholder="Fathers Name" value="Kishore" required>
+                                <input type="text" class="form-control" name="fathers_name" id="fathers_name" placeholder="Fathers Name" required>
                             </div>
                         </div>
                         
                         <div class="row fullwidth">
                             <div class="form-group col-sm-4">
                                 <label for="">Phone No:</label>
-                                <input type="number" class="form-control" name="phone" id="phone" maxlength="10" value="9658462314" required>
+                                <input type="number" class="form-control" name="phone" id="phone" maxlength="10" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">WhatsApp No.:</label>
-                                <input type="number" class="form-control" name="whatsapp" id="whatsapp" maxlength="10" value="9658462314" required>
+                                <input type="number" class="form-control" name="whatsapp" id="whatsapp" maxlength="10" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Email:</label>
-                                <input type="email" class="form-control" name="email" id="email" value="rohit@gmail.com" required>
+                                <input type="email" class="form-control" name="email" id="email" required>
                             </div>
                         </div>
 
@@ -43,11 +43,11 @@
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Aadhar:</label>
-                                <input type="number" class="form-control" name="aadhar" id="aadhar" maxlength="12" value="658846231425" required>
+                                <input type="number" class="form-control" name="aadhar" id="aadhar" maxlength="12" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Password:</label>
-                                <input type="password" class="form-control" name="password" id="password" value="12345678" required>
+                                <input type="password" class="form-control" name="password" id="password" required>
                             </div>
                         </div>
 
@@ -92,37 +92,37 @@
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">District:</label>
-                                <input type="text" class="form-control" name="district" id="district" value="howrah" required>
+                                <input type="text" class="form-control" name="district" id="district" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Vill/City:</label>
-                                <input type="text" class="form-control" name="vill_city" id="vill_city" value="liluah" required>
+                                <input type="text" class="form-control" name="vill_city" id="vill_city" required>
                             </div>
                         </div>
 
                         <div class="row fullwidth">
                             <div class="form-group col-sm-4">
                                 <label for="">Block:</label>
-                                <input type="text" class="form-control" name="block" id="block" value="liluah" required>
+                                <input type="text" class="form-control" name="block" id="block" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Post Office:</label>
-                                <input type="text" class="form-control" name="post_office" id="post_office" value="liluah" required>
+                                <input type="text" class="form-control" name="post_office" id="post_office" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Police Station:</label>
-                                <input type="text" class="form-control" name="police_station" id="police_station" value="liluah" required>
+                                <input type="text" class="form-control" name="police_station" id="police_station" required>
                             </div>
                         </div>
 
                         <div class="row fullwidth">
                             <div class="form-group col-sm-6">
                                 <label for="">Pin Code:</label>
-                                <input type="number" class="form-control" name="pin_code" id="pin_code" value="700001" required>
+                                <input type="number" class="form-control" name="pin_code" id="pin_code" required>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="">Contact No.:</label>
-                                <input type="number" class="form-control" name="contact_no" id="contact_no" value="1425879635" required>
+                                <input type="number" class="form-control" name="contact_no" id="contact_no" required>
                             </div>
                         </div>
 
@@ -146,7 +146,7 @@
                         <div class="row fullwidth">
                             <div class="form-group col-sm-4">
                                 <label for="">Last Qualification:</label>
-                                <input type="text" class="form-control" name="last_qualific" id="last_qualific" value="12th" required>
+                                <input type="text" class="form-control" name="last_qualific" id="last_qualific" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Passing Year:</label>
@@ -154,18 +154,18 @@
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Marks in Parcentage(%):</label>
-                                <input type="text" class="form-control" name="parcentage" id="parcentage" value="84" required>
+                                <input type="text" class="form-control" name="parcentage" id="parcentage" required>
                             </div>
                         </div>
 
                         <div class="row fullwidth">
                             <div class="form-group col-sm-4">
                                 <label for="">Marks:</label>
-                                <input type="number" class="form-control" name="marks" id="marks" maxlength="5" value="420" required>
+                                <input type="number" class="form-control" name="marks" id="marks" maxlength="5" required>
                             </div>
                             <div class="form-group col-sm-4">
                                 <label for="">Examination Board:</label>
-                                <input type="text" class="form-control" name="exam_board" id="exam_board" value="WBBHSE" required>
+                                <input type="text" class="form-control" name="exam_board" id="exam_board" required>
                             </div>
                         </div>
 

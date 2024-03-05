@@ -1006,7 +1006,6 @@
             $('#CentreloginBtn').click(function () {
                 let userName = $('#userEmailCentre').val();
                 let password = $('#passwordCentre').val();
-                alert("hello")
                 $.ajax({
                     type: "POST",
                     url: base_url+'admin/Admin/centre_login',

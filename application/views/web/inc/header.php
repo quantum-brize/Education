@@ -16,13 +16,13 @@
                                     <span></span>
                                 </span>
                             </a>
-                            <a href="https://dreamslms.dreamstechnologies.com/laravel/public" class="navbar-brand logo">
+                            <a href="<?php echo base_url('home')?>" class="navbar-brand logo">
                                 <img src="<?php echo base_url()?>assets/img/logo.svg" class="img-fluid" alt="Logo">
                             </a>
                         </div>
                         <div class="main-menu-wrapper">
                             <div class="menu-header">
-                                <a href="https://dreamslms.dreamstechnologies.com/laravel/public" class="menu-logo">
+                                <a href="<?php echo base_url('home')?>" class="menu-logo">
                                     <img src="<?php echo base_url()?>assets/img/logo.svg" class="img-fluid" alt="Logo">
                                 </a>
                                 <a id="menu_close" class="menu-close" href="javascript:void(0);">
@@ -143,7 +143,7 @@
         </header>
 <script>
     $(document).ready(function () {
-        var base_url = 'http://localhost/student_website/'
+        var base_url = '<?= base_url()?>'
         $('#loginBtn').click(function () {
             $.ajax({
                 type: "GET",

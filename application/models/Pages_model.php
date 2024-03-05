@@ -222,6 +222,19 @@ class Pages_model extends Admin_model
         
     }
 
+    public function get_student_details($id) {
+        $this->db->select('u.*,s.*, ad.*');
+        $this->db->from('users as u');
+        $this->db->join('address as ad', 'u.uid = ad.user_id');
+        $this->db->join('student as s', 'u.uid = s.user_id');
+        $this->db->where('u.uid', $id);
+        $query = $this->db->get();
+        $student = $query->row_array();
+        // $this->prd($donations);
+        return !empty($student) ? $student : [];
+        
+    }
+
     public function get_student_marks($id)
     {
         $result = $this->db->select('*')

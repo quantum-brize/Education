@@ -46,6 +46,7 @@ $route['admin/enroled-courses']     = 'admin/Pages/enroled_courses';
 $route['admin/testimonial']         = 'admin/Pages/testimonial';
 $route['admin/testimonial-add']     = 'admin/Pages/testimonial_add';
 $route['admin/centre-details']      = 'admin/Pages/centre_details';
+$route['admin/student-details']     = 'admin/Pages/student_details';
 
 
 

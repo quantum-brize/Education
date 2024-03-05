@@ -41,8 +41,9 @@ class Common extends CI_Controller
 		 	$this->load->view('/' . $data['site'] . '/inc/header_link.php', $data);
 		 	$this->load->view('/' . $data['site'] . '/inc/header.php', $user);
 		}else{
+			$user['user_img'] = $this->Pages_model->get_user_img_by_id($this->session->userdata(SES_ADMIN_ID));
 			$this->load->view('/' . $data['site'] . '/inc/header_link.php', $data);
-			$this->load->view('/' . $data['site'] . '/inc/header.php');
+			$this->load->view('/' . $data['site'] . '/inc/header.php', $user);
 		}
 		
 

@@ -94,6 +94,7 @@
                                                 <option value="inactive">Inactive</option>
                                             </select>
                                         </td>
+                                        <td><a href="<?= base_url('admin/Pages/centre_details?id='.$centre['uid'])?>" class="btn btn-success" role="button">view</a></td>
                                     </tr>
                                     <?php } } ?>
                                     <!-- Add more rows as needed -->
@@ -140,6 +141,7 @@
                                                 <option value="inactive">Inactive</option>
                                             </select>
                                         </td>
+                                        <td><a href="<?= base_url('admin/Pages/centre_details?id='.$centre['uid'])?>" class="btn btn-success" role="button">view</a></td>
                                     </tr>
                                     <?php } } ?>
                                     <!-- Add more rows as needed -->
@@ -147,7 +149,7 @@
                             </table>
                         </div>
 <script>
-    var base_url = 'http://localhost/student_website/'
+    var base_url = '<?= base_url()?>'
     function update_status_Function_active(user_id) {
         var status = document.getElementById("update_status_active").value;
         $.ajax({
