@@ -21,6 +21,7 @@ $route['admin/student-logout']          = 'admin/Admin/student_logout';
 $route['edit-profile']                  = 'web/load/edit_profile';
 $route['get-certificate-centre']        = 'web/load/get_cirtificate_centre';
 $route['certificate-centre']            = 'web/load/cirtificate_centre';
+$route['marksheet']                     = 'web/load/marksheet';
 
 
 // ============================ admin routes

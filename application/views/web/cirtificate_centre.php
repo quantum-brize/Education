@@ -4,46 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience Certificate Generator</title>
-  <!-- <link rel="stylesheet" href="styles.css"> -->
-  <link rel="stylesheet" href="<?=base_url()?>assets/css/styles_cirtificate_centre.css">
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/styles_cirtificate.css">
 </head>
-<style>
-    /* Basic button style */
-a.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f4b71a; /* Green background color */
-    color: white; /* White text color */
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Hover effect */
-a.button:hover {
-    background-color: #45a049; /* Darker green */
-}
-</style>
 <body>
 
     <div class="toolbar no-print">
-        <!-- <button class="btn btn-info" onclick="window.print()">
+        <button class="btn btn-info" onclick="window.print()">
             Print Certificate
-        </button> -->
-        <!-- <button class="btn btn-info" id="downloadPDF">Download PDF</button> -->
-       <a href="<?= base_url('web/Load/download_pdf')?>" class="button">Download PDF</a>
+        </button>
+        <button class="btn btn-info"  id="downloadPDF">Download PDF</button>
     </div>
     <div class="cert-container print-m-0">
-      <div id="content2" class="cert">
-        <img
-          src="https://edgarsrepo.github.io/certificate.png"
-          class="cert-bg"
-          alt="" style="position: absolute; height: 200%;"
-        />
+      <div id="content2" class="cert certificate">
+        <img src="<?= base_url('uploads/cirtificate_img.png')?>" class="cert-bg" alt="" />
         <div class="cert-content" style="margin-top:50px;">
-            <!-- <h1 class="other-font">Zcc Computer Education</h1>
+            <h1 class="other-font">Zcc Computer Education</h1>
             <span style="font-size: 15px;">[An Institute of Computer And IT education]</span><br>
             <span style="font-size: 15px; font-weight: bold">Regd. Under Ministry of Affairs By Govt. of
                 India</span><br>
@@ -52,54 +27,43 @@ a.button:hover {
                 www.zcceducation.com</span>
             <span style="position: absolute; margin-left: 220px">S.NO : 101</span>
             <h3 style="color:white;background: #2955a0;font-weight:bold; font-size: 25px;">
-                <center>CERTIFICATE/ DIPLOMA</center>
+                <center>AUTHORISED CENTRE CERTIFICATE</center>
             </h3>
-            <img src="<?= base_url($student[0]['img'])?>" alt="" style="height:100px; width:90px; position: absolute; right: 90px; margin-top: 40px; border: 1px solid" >
-            <h1 class="other-font">This Is Certify That</h1>
-            
-            <span style="font-size: 15px; font-weight: bold;position: absolute; margin-left: -300px">Registration Number:</span>
-            
+            <span style="font-size: 20px; font-weight: bold">This Cirtificate Is Proudly Presented To</span><br><br>
+            <span
+                style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -100px"><span style="font-size: 20px; font-weight: bold;"><?= $centre['centre_name']?></span></span>
             <br><br>
             <span
-                style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -300px">Mr./Ms./Mrs:&nbsp&nbsp <span style="font-size: 20px; font-weight: bold;"><?= $student[0]['name']?></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspD.O.B: &nbsp&nbsp<span style="font-size: 20px; font-weight: bold;"><?= $student[0]['dob']?></span></span>
+                style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -250px">Director's Name:&nbsp&nbsp&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;"><?= $centre['name']?></span></span>
             <br><br>
-            <span style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -300px">D/o,S/o,S/h:&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;"><?= $student[0]['fathers_name']?></span></span>
+            <span
+                style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -250px">Centre Code:&nbsp&nbsp&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;">1234ABCD</span></span>
             <br><br>
-            <span style="font-size: 15px; font-weight: bold;position: absolute; margin-left: -300px">Course
-                Duration:&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;"><?= $student[0]['duration']?></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFrom:&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;"><?= $student[0]['start_date']?></span>&nbsp&nbspTo:&nbsp&nbsp <span style="font-size: 20px; font-weight: bold;"><?= $student[0]['end_date']?></span></span>
+            <span
+                style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -250px">Issue Date:&nbsp&nbsp&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;">15-01-2002</span></span>
             <br><br>
-            <span style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -300px">He/She Has Passed The Final ExaminationConducted By (Exam
-                Winng) In:</span>
+            <span
+                style="font-size: 15px; position: absolute; margin-left: -280px">_____________________________________________________________________</span>
+            <br><br><br><br><br><br>
+            <span
+                style="font-size: 15px; font-weight: bold; position: absolute;"><span style="position: absolute; margin-left: -300px"> Signature of Authorised Signatory:</span><span style=" margin-left: 80px"> Signature of Authorised Signatory:</span></span>
             <br><br>
-            <span style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -300px">In Our Authorised Study
-                Centre:</span>
-            <br><br>
-            <span style="font-size: 15px; font-weight: bold;margin-left: -110px; position: absolute; margin-left: -300px">He/She Has passed The Examination
-                With:&nbsp&nbsp <span style="font-size: 20px; font-weight: bold;"><?= number_format($student[0]['parcentage'], 2)?>(%)</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGrade:&nbsp&nbsp <span style="font-size: 20px; font-weight: bold;">
-                <?php
-                 if($student[0]['parcentage'] > 60){
-                     echo "A";
-                 }else if($student[0]['parcentage'] > 50 && $student[0]['parcentage'] < 60){
+            <!-- <span style="font-size: 17px; font-weight: bold">You may also visit to verify your result
+                https://www.zcceducation.com/</span><br><br> -->
 
-                 }
-                 ?></span></span>
-            <br><br><br><br>
-            <span style="font-size: 17px; font-weight: bold">You may also visit to verify your result
-                https://www.zcceducation.com/</span><br><br>
-            <span style="font-size: 20px; font-weight: bold">On The Recomendation Of The Board Of
-                Examiners</span><br><br>
 
           <br /><br /><br /><br />
+          <small  style="font-weight: bold;">Address: <?= $centre['centre_place']?>, <?= $centre['district']?>, <?= $centre['state']?>, -<?= $centre['pincode']?></small><br /><br />
           <small
             >Completion of the Azimuth Check and review of the Azimuth Check
             recommendations in ArmyFit is worth 1.0 hours in the Electronic
             Based Distance Learning (EBDL) program for USAR and ARNG Soldiers.
             For more information on the EBDL, see your unit training NCO.</small
-          > -->
-          <!-- <div class="bottom-txt">
+          >
+          <div class="bottom-txt">
             <span>G-1 DAPE-ARR-SF</span>
             <span>Completed on: April 3, 2020</span>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -108,5 +72,60 @@ a.button:hover {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience Certificate Generator</title>
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/styles_cirtificate.css">
+</head>
+<body>
+    <div class="toolbar no-print">
+      <button class="btn btn-info" onclick="window.print()">
+        Print Certificate
+      </button>
+      <button class="btn btn-info" id="downloadPDF">Download PDF</button>
+    </div>
+    <div class="cert-container print-m-0">
+      <div id="content2" class="cert">
+        <img
+          src="https://edgarsrepo.github.io/certificate.png"
+          class="cert-bg"
+          alt=""
+        />
+        <div class="cert-content">
+          <h1 class="other-font">Certificate of Completion</h1>
+          <span style="font-size: 30px;">Reginald Bentley</span>
+          <br /><br /><br /><br />
+          <span class="other-font"
+            ><i><b>has completed the</b></i></span
+          >
+          <br />
+          <span style="font-size: 40px;"><b>Azimuth Check</b></span>
+          <br />
+          <small>(For Soldiers)</small>
+          <br /><br /><br /><br />
+          <small
+            >Completion of the Azimuth Check and review of the Azimuth Check
+            recommendations in ArmyFit is worth 1.0 hours in the Electronic
+            Based Distance Learning (EBDL) program for USAR and ARNG Soldiers.
+            For more information on the EBDL, see your unit training NCO.</small
+          >
+          <div class="bottom-txt">
+            <span>G-1 DAPE-ARR-SF</span>
+            <span>Completed on: April 3, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+</body>
+</html> -->
