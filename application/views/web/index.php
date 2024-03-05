@@ -960,7 +960,7 @@
 </section>
 <script>
         $(document).ready(function () {
-            var base_url = 'http://localhost/student_website/'
+            var base_url = '<?= base_url()?>'
             $('#StudentloginBtn').click(function () {
                 let userName = $('#userEmailStudent').val();
                 let password = $('#passwordStudent').val();

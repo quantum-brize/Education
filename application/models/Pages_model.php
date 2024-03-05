@@ -222,6 +222,16 @@ class Pages_model extends Admin_model
         
     }
 
+    public function get_student_marks($id)
+    {
+        $result = $this->db->select('*')
+        ->from(TABLE_RESULTS)
+        ->where('user_id', $id)
+        ->get()
+        ->result_array();
+        return !empty($result) ? $result : [];
+    }
+
     public function get_user_by_id($id)
     {
         $user = $this->db->select('*')

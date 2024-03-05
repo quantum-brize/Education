@@ -7,11 +7,11 @@
             </div>
             <div class="col-md-7 d-flex ">
                 <div class="join-mentor aos" >
-                    <h2>Get Your CirtiFicate</h2>
+                    <h2>Get Your Marksheet</h2>
                     <ul class="course-list">
                     </ul>
                     <div class="all-btn all-category d-flex align-items-center" id="get_element">
-                        <a href="<?= base_url('cirtificate') ?>" id="get_cirtificate_button" class="btn btn-primary">Get Cirtificate</a>
+                        <a href="<?= base_url('marksheet') ?>" id="get_marksheet_button" class="btn btn-primary">Get Marksheet</a>
                     </div>
                 </div>
             </div>
@@ -23,23 +23,21 @@
         var base_url = '<?= base_url()?>'
             $.ajax({
                 type: "GET",
-                url: base_url+'web/Load/get_cirtificate_details',
+                url: base_url+'web/Load/get_marksheet_details',
                 success: function(response){
                     resp = JSON.parse(response)
                     if (resp.status) {
                         console.log(resp.data)
                         var count = (resp.data).length;
                         
-                        if(resp.data[0].grand_total < count*40){
-                            // alert(count)
-                            $('#get_cirtificate_button').hide();
-                            html = '<h4 style="color:red">You are not eligable to get cirtificate!</h4>'
-                            $('#get_element').html(html);
-
-                        }
+                        // if(resp.data[0].grand_total < count*40){
+                        //     $('#get_marksheet_button').hide();
+                        //     html = '<h4 style="color:red">You are not eligable to get cirtificate!</h4>'
+                        //     $('#get_element').html(html);
+                        // }
                     }else{
-                        $('#get_cirtificate_button').hide();
-                            html = '<h4 style="color:red">Certificate not found!</h4>'
+                        $('#get_marksheet_button').hide();
+                            html = '<h4 style="color:red">Marksheet not found!</h4>'
                             $('#get_element').html(html); 
                     }
                 },

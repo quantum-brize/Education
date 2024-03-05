@@ -23,7 +23,7 @@
     </div>
 </section>
 <script>
-        var base_url = 'http://localhost/student_website/'
+        var base_url = '<?= base_url()?>'
         function enrole_this_course(course_id) {
             $.ajax({
                 type: "POST",

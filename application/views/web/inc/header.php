@@ -58,7 +58,7 @@
                                 <li class="has-submenu ">
                                     <a class="">Cirtificates <i class="fas fa-chevron-down"></i></a>
                                     <ul class="submenu">
-                                        <li class=""><a >Marksheet</a></li>
+                                        <li class=""><a href="<?php echo base_url('get-marksheet')?>">Marksheet</a></li>
                                         <li class=""><a id="loginBtn">Cirtificate</a></li>
                                     </ul>
                                 </li>

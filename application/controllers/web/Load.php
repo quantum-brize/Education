@@ -101,6 +101,19 @@ class Load extends Common {
         }
     }
 
+    public function get_marksheet(){
+        if($this->session->userdata(SES_STUDENT_ID) != null && $this->session->userdata(SES_STUDENT_EMAIL) != null && $this->session->userdata(SES_TYPE_STUDENT) == 'student'){
+            $this->init_model(MODEL_PAGES);
+            // $data['data_page']['marks'] = $this->Pages_model->get_student_marks_by_id($this->session->userdata(SES_STUDENT_ID));
+        
+            $this->init_model(MODEL_PAGES);
+            $data = PAGE_DATA_WEB;
+            $this->load_page('web/get_marksheet.php',$data);
+        }else{
+            redirect('home');
+        }
+    }
+
     public function get_student_details()
     {
         $resp = [
@@ -130,6 +143,32 @@ class Load extends Common {
     }
 
     public function get_cirtificate_details()
+    {
+        $resp = [
+            KEY_STATUS => false,
+            KEY_MESSAGE => '',
+            KEY_TYPE => '',
+            'data' => ''
+        ];
+        if($this->session->userdata(SES_STUDENT_ID) != null && $this->session->userdata(SES_STUDENT_EMAIL) != null && $this->session->userdata(SES_TYPE_STUDENT) == 'student'){
+            $this->init_model(MODEL_PAGES);
+            $resp['data'] = $this->Pages_model->get_student_marks_by_id($this->session->userdata(SES_STUDENT_ID));
+            // $this->prd($resp['data']);
+            if($resp['data']){
+                $resp[KEY_STATUS] = true;
+                $resp[KEY_MESSAGE] = 'user found';
+                echo $this->response($resp);
+            }else{
+                $resp[KEY_MESSAGE] = 'Cirtificate Not Found!s';
+                return $this->response($resp);
+            }
+        }else{
+                $resp[KEY_MESSAGE] = 'user not found';
+                return $this->response($resp);
+        }
+       
+    }
+    public function get_marksheet_details()
     {
         $resp = [
             KEY_STATUS => false,
@@ -223,7 +262,8 @@ class Load extends Common {
         if($this->session->userdata(SES_STUDENT_ID) != null && $this->session->userdata(SES_STUDENT_EMAIL) != null && $this->session->userdata(SES_TYPE_STUDENT) == 'student'){
             $this->init_model(MODEL_PAGES);
             $data['student'] = $this->Pages_model->get_student_details_by_id($this->session->userdata(SES_STUDENT_ID));
-            // $this->prd($data['student']);
+            $data['marks'] = $this->Pages_model->get_student_marks_by_id($this->session->userdata(SES_STUDENT_ID));
+            // $this->prd($data['marks']);
             $this->load->view('web/marksheet.php', $data);
             $this->load->view('web/inc/js/marksheet_js.php');
         }else{

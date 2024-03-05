@@ -22,6 +22,7 @@ $route['edit-profile']                  = 'web/load/edit_profile';
 $route['get-certificate-centre']        = 'web/load/get_cirtificate_centre';
 $route['certificate-centre']            = 'web/load/cirtificate_centre';
 $route['marksheet']                     = 'web/load/marksheet';
+$route['get-marksheet']                 = 'web/load/get_marksheet';
 
 
 // ============================ admin routes

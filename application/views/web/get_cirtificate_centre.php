@@ -20,7 +20,7 @@
 </section>
 <script>
     $(document).ready(function () {
-        var base_url = 'http://localhost/student_website/'
+        var base_url = '<?= base_url()?>'
             $.ajax({
                 type: "GET",
                 url: base_url+'web/Load/get_centre_cirtificate_details',
