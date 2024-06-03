@@ -28,7 +28,6 @@ a.button:hover {
 }
 </style>
 <body>
-
     <div class="toolbar no-print">
         <button class="btn btn-info" onclick="window.print()">
             Print Certificate
@@ -40,26 +39,49 @@ a.button:hover {
     </div>
     <div class="cert-container print-m-0">
       <div id="content2" class="cert certificate">
-        <img src="<?= base_url('uploads/cirtificate_img.png')?>" class="cert-bg" alt="" />
-        <div class="cert-content" style="margin-top:20px;">
-            <h1 class="other-font">Zcc Computer Education</h1>
-            <span style="font-size: 12px;">[An Institute of Computer And IT education]</span><br>
-            <span style="font-size: 12px; font-weight: bold">Regd. Under Ministry of Affairs By Govt. of
-                India</span><br>
-            <span style="font-size: 15px; font-weight: bold">RAn IAF ISO 9001:2015 Certified</span><br>
-            <span style="font-size: 12px; font-weight: bold; margin-left:-90px; margin-right: 120px; position: absolute;">Website:
-                www.zcceducation.com</span>
-            <span style="position: absolute; margin-left: 220px">S.NO : 101</span>
+        <img src="<?= base_url('uploads/student_marksheet_new.png')?>" class="cert-bg" alt="" />
+        <div class="cert-content" style="margin-top:100px;">
+            <!-- <img src="<?= base_url($student[0]['img'])?>" alt="" style="height:100px; width:90px; position: absolute; right: 90px; margin-top: 0px; border: 1px solid" > -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <span
+                    style="font-size: 13px; font-weight: bold; position: absolute; margin-left: 0px">Student Name:&nbsp&nbsp <?= $student[0]['name']?>
+                    </span><br>
+                    <span
+                        style="font-size: 13px; font-weight: bold; position: absolute; margin-left: 0px">Roll No:&nbsp&nbsp [Roll No]
+                    </span><br>
+                    <span
+                        style="font-size: 13px; font-weight: bold; position: absolute; margin-left: 0px">Course Name:&nbsp&nbsp <?= $student[0]['course_name']?>
+                    </span>
+                </div>
+                <div class="col-lg-6">
+                    <span
+                        style="font-size: 13px; font-weight: bold; position: absolute; margin-left: 0px">Centre Name:&nbsp&nbsp Shivaji Mahraj Youth Computer Academy
+                    </span>
+                    <br>
+                    <span
+                        style="font-size: 13px; font-weight: bold; position: absolute; margin-left: 0px">Centre Code:&nbsp&nbsp [Centre-Code]
+                    </span>
+                    <br>
+                    <!-- <span
+                        style="font-size: 13px; font-weight: bold; position: absolute; margin-left: 0px">Course Name:&nbsp&nbsp <?= $student[0]['name']?>
+                    </span> -->
+                </div>
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
             <br>
-            <h3 style="color:white;background: #2955a0;font-weight:bold; font-size: 25px;">
-                <center>MARK LIST</center>
-            </h3>
-            <img src="<?= base_url($student[0]['img'])?>" alt="" style="height:100px; width:90px; position: absolute; right: 90px; margin-top: 0px; border: 1px solid" >
-            <span
-                style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -300px">This Marksheet Is Awarded To Mr./Ms./Mrs:&nbsp&nbsp <span style="font-size: 20px; font-weight: bold;"><?= $student[0]['name']?></span>  
-            </span>
-            <br><br>
-            <span
+            <!-- <span
                 style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -300px">D/o,S/o,S/h:&nbsp&nbsp <span style="font-size: 20px; font-weight: bold;"><?= $student[0]['fathers_name']?></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspD.O.B: &nbsp&nbsp<span style="font-size: 20px; font-weight: bold;"><?= $student[0]['dob']?></span></span>
             <br><br>
             <span style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -300px">Successfully Completion of Course:&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;"><?= $student[0]['course_name']?></span></span>
@@ -74,8 +96,8 @@ a.button:hover {
                  }
                  ?>
             </span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOf duration:&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;"><?= $student[0]['duration']?></span></span>
-            <br><br>
-            <span style="font-size: 10px; font-weight: bold">Your Performance In The Examination Is As Below</span><br>
+            <br><br> -->
+            <!-- <span style="font-size: 10px; font-weight: bold">Your Performance In The Examination Is As Below</span><br> -->
             <table class="table table-bordered" style="font-size: 12px;">
                 <thead>
                     <tr>
@@ -121,16 +143,16 @@ a.button:hover {
                     </tr>
                 </tbody>
             </table>
-            <span style="font-size: 12px; font-weight: bold; position: absolute; margin-left: -300px">Overall Parcentage:&nbsp&nbsp<span style="font-size: 17px; font-weight: bold;">(<?= number_format($marks[0]['parcentage'], 2)?>%)</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGrade:&nbsp&nbsp <span style="font-size: 17px; font-weight: bold;">
+            <span style="font-size: 12px; font-weight: bold; position: absolute; margin-left: 160px">Overall Parcentage:&nbsp&nbsp(<?= number_format($marks[0]['parcentage'], 2)?>%)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGrade:&nbsp&nbsp 
                 <?php
                  if($student[0]['parcentage'] > 60){
                      echo "A";
                  }else if($student[0]['parcentage'] > 50 && $student[0]['parcentage'] < 60){
 
                  }
-                 ?></span></span>
+                 ?></span>
             <br><br>
-            <span style="font-size: 17px; font-weight: bold">You may also visit to verify your result
+            <!-- <span style="font-size: 17px; font-weight: bold">You may also visit to verify your result
                 https://www.zcceducation.com/</span><br><br>
             <span style="font-size: 20px; font-weight: bold">On The Recomendation Of The Board Of
                 Examiners</span><br><br>
@@ -145,7 +167,7 @@ a.button:hover {
           <div class="bottom-txt">
             <span>G-1 DAPE-ARR-SF</span>
             <span>Completed on: April 3, 2020</span>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

@@ -7,11 +7,11 @@
             </div>
             <div class="col-md-7 d-flex ">
                 <div class="join-mentor aos" >
-                    <h2>Get Your CirtiFicate</h2>
+                    <h2>Get Your Certificate</h2>
                     <ul class="course-list">
                     </ul>
                     <div class="all-btn all-category d-flex align-items-center" id="get_element">
-                        <a href="<?= base_url('cirtificate') ?>" id="get_cirtificate_button" class="btn btn-primary">Get Cirtificate</a>
+                        <a href="<?= base_url('cirtificate') ?>" id="get_cirtificate_button" class="btn btn-primary">Get Certificate</a>
                     </div>
                 </div>
             </div>

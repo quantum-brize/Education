@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience Certificate Generator</title>
-  <link rel="stylesheet" href="<?=base_url()?>assets/css/styles_cirtificate.css">
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/styles_cirtificate_centre.css">
 </head>
 <body>
 
@@ -16,35 +16,23 @@
     </div>
     <div class="cert-container print-m-0">
       <div id="content2" class="cert certificate">
-        <img src="<?= base_url('uploads/cirtificate_img.png')?>" class="cert-bg" alt="" />
-        <div class="cert-content" style="margin-top:50px;">
-            <h1 class="other-font">Zcc Computer Education</h1>
-            <span style="font-size: 15px;">[An Institute of Computer And IT education]</span><br>
-            <span style="font-size: 15px; font-weight: bold">Regd. Under Ministry of Affairs By Govt. of
-                India</span><br>
-            <span style="font-size: 20px; font-weight: bold">RAn IAF ISO 9001:2015 Certified</span><br>
-            <span style="font-size: 15px; font-weight: bold; margin-left:-120px; margin-right: 120px; position: absolute;">Website:
-                www.zcceducation.com</span>
-            <span style="position: absolute; margin-left: 220px">S.NO : 101</span>
-            <h3 style="color:white;background: #2955a0;font-weight:bold; font-size: 25px;">
-                <center>AUTHORISED CENTRE CERTIFICATE</center>
-            </h3>
+        <img src="<?= base_url('uploads/franchise_certificate.png')?>" class="cert-bg" alt="" />
+        <div class="cert-content" style="margin-top:300px;">
             <span style="font-size: 20px; font-weight: bold">This Cirtificate Is Proudly Presented To</span><br><br>
             <span
                 style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -100px"><span style="font-size: 20px; font-weight: bold;"><?= $centre['centre_name']?></span></span>
             <br><br>
             <span
-                style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -250px">Director's Name:&nbsp&nbsp&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;"><?= $centre['name']?></span></span>
-            <br><br>
-            <span
-                style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -250px">Centre Code:&nbsp&nbsp&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;">1234ABCD</span></span>
+                style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -250px">Director's Name:&nbsp&nbsp&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;"><?= $centre['name']?>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span> <span style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -250px">Centre Code:&nbsp&nbsp&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;">1234ABCD</span></span></span>
+            <!-- <br><br>
+            <span style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -250px">Centre Code:&nbsp&nbsp&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;">1234ABCD</span></span> -->
             <br><br>
             <span
                 style="font-size: 15px; font-weight: bold; position: absolute; margin-left: -250px">Issue Date:&nbsp&nbsp&nbsp&nbsp<span style="font-size: 20px; font-weight: bold;">15-01-2002</span></span>
             <br><br>
             <span
                 style="font-size: 15px; position: absolute; margin-left: -280px">_____________________________________________________________________</span>
-            <br><br><br><br><br><br>
+            <br><br><br><br>
             <span
                 style="font-size: 15px; font-weight: bold; position: absolute;"><span style="position: absolute; margin-left: -300px"> Signature of Authorised Signatory:</span><span style=" margin-left: 80px"> Signature of Authorised Signatory:</span></span>
             <br><br>

@@ -43,14 +43,16 @@
                                 <li class="has-submenu ">
                                     <a class="">Franchise Area <i class="fas fa-chevron-down"></i></a>
                                     <ul class="submenu">
-                                        <li class=""><a href="<?php echo base_url('franchise-list')?>">Franchise List</a></li>
+                                        <!-- <li class=""><a href="<?php echo base_url('franchise-list')?>">Franchise List</a></li> -->
                                         <li class=""><a href="<?php echo base_url('get-certificate-centre')?>">Cirtificate</a></li>
                                     </ul>
                                 </li>
                                 <?php }?>
-                                <li class="has-submenu <?= isset($online_registration) ? 'active' : '' ?>">
-                                    <a href="<?php echo base_url('online-registration')?>">Franchise Registration </a>
-                                </li>
+                                <?php if($user_type != 'student'){?>
+                                    <li class="has-submenu <?= isset($online_registration) ? 'active' : '' ?>">
+                                        <a href="<?php echo base_url('online-registration')?>">Franchise Registration </a>
+                                    </li>
+                                <?php }?>
                                 <li class="has-submenu <?= isset($student_admission) ? 'active' : '' ?>">
                                     <a href="<?php echo base_url('student-admission')?>">Student Admission </a>
                                 </li>
