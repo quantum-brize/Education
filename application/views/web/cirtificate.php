@@ -49,8 +49,7 @@ a.button:hover {
             <div style="margin-bottom: 1px;">This certificate that <?= $student[0]['name']?> has successfully completed the </div>
             <div style="margin-bottom: 1px;"><?= $student[0]['course_name']?> at Shivam Maharaj Youth Computer Academy. This course,</div>
             <div style="margin-bottom: 1px;"> conducted from <?= $student[0]['start_date']?> to <?= $student[0]['end_date']?>, consisted of <?= $student[0]['duration']?> of</div>
-            <div style="margin-bottom: 1px;">comprehensive training in <?= $student[0]['subject']?>. Issued on this <?= date('d-m-Y');?> by</div>
-            <div style="margin-bottom: 1px;">[Authorised signature/Stamp].</div>
+            <div style="margin-bottom: 1px;">comprehensive training in <?= $student[0]['subject']?>. Issued on this <?= date('d-m-Y');?>.</div>
             <br><br>
             <span>Congratulation on your achivement.</span>
             <br><br>
