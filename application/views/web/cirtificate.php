@@ -39,7 +39,8 @@ a.button:hover {
     <div class="cert-container print-m-0">
       <div id="content2" class="cert certificate">
         <img src="<?= base_url('uploads/student_certificate_new.png')?>" class="cert-bg" alt="" />
-        <div class="cert-content" style="margin-top:120px;">
+        <span><p style="font-size: 15px; font-weight: bold;position: absolute; margin-top:180px; margin-left:60px;">CIN No. AMYCA190</p></span>
+        <div class="cert-content" style="margin-top:130px;">
             <img src="<?= base_url($student[0]['img'])?>" alt="" style="height:100px; width:90px; position: absolute; right: 90px; margin-top: 40px; border: 1px solid" >
             
             <span><p style="font-size: 15px; font-weight: bold;position: absolute; ">Regd No.</p>

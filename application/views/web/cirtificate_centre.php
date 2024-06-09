@@ -17,6 +17,7 @@
     <div class="cert-container print-m-0">
       <div id="content2" class="cert certificate">
         <img src="<?= base_url('uploads/franchise_certificate.png')?>" class="cert-bg" alt="" />
+        <span style="font-size: 15px; font-weight: bold; position: absolute; margin-top: 270px; margin-left: 230px;">CIN No. AMYCA190</span>
         <div class="cert-content" style="margin-top:300px;">
             <span style="font-size: 20px; font-weight: bold">This Cirtificate Is Proudly Presented To</span><br><br>
             <span
